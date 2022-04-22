@@ -96,10 +96,8 @@ false || true; // true
 (5 >= 5) || (3 < 6); // true
 // Retorna o primeiro valor true que encontrar
 //-----------------------------------------------------------------------------------------
-/*
-SWITCH
-Com o switch você pode verificar se uma variável é igual à diferentes valores utilizando o case. Caso ela seja igual, você pode fazer alguma coisa e utilizar a palavra chave break; para cancelar a continuação. O valor de default ocorrerá caso nenhuma das anteriores seja verdadeira.
-*/
+// SWITCH
+// Com o switch você pode verificar se uma variável é igual à diferentes valores utilizando o case. Caso ela seja igual, você pode fazer alguma coisa e utilizar a palavra chave break; para cancelar a continuação. O valor de default ocorrerá caso nenhuma das anteriores seja verdadeira.
 var corFavorita = 'Azul';
 
 switch (corFavorita) {
@@ -117,10 +115,7 @@ switch (corFavorita) {
 }
 //-----------------------------------------------------------------------------------------
 // Exercício
-/*
-Verifique se a sua idade é maior do que a de algum parente
-Dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
-*/
+// Verifique se a sua idade é maior do que a de algum parente dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
 var minhaIdade = 23;
 var idadeOutros = 18;
 if(minhaIdade > idadeOutros) {

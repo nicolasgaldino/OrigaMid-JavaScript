@@ -50,9 +50,44 @@ Os elementos selecionados anteriormente são $1, $2 ...
 // Exercício
 
 // Verifique a distância da primeira imagem em relação ao topo da página
+const imgs = document.querySelector('img');
+console.log(imgs.offsetTop);
 
 // Retorne a soma da largura de todas as imagens
+function somaImgs() {
+  const imagens = document.querySelectorAll('img');
+  let tot = 0;
+  imagens.forEach((i) => {
+    tot += i.offsetWidth;
+  });
+  console.log(tot)
+};
+window.onload = () => {
+  somaImgs();
+};
 
 // Verifique se os links da página possuem o mínimo recomendado para telas utilizadas com o dedo. (48px/48px de acordo com o google)
+const links = document.querySelectorAll('a');
+links.forEach((i) => {
+  const linkWidht = i.offsetWidth;
+  const linkHeight = i.offsetHeight;
+  if(linkWidht >= 48 && linkHeight >= 48) {
+    console.log(i, 'Possui Acessibilidade')
+  } else {
+    console.log(i, 'Não Possui Acessibilidade')
+  }
+});
 
 // Se o browser for menor que 720px, adicione a classe menu-mobile ao menu
+// Minha solução:
+const mobMenu = document.querySelector('.menu')
+if(window.innerWidth < 720) {
+  mobMenu.classList.add('menuMobile')
+};
+
+// Solução do professor:
+const browserSmall = window.matchMedia('(max-widht: 720px)').matches;
+if(browserSmall) {
+  const menu = document.querySelector('.menu');
+  menu.classList.add('menu-mobile')
+};

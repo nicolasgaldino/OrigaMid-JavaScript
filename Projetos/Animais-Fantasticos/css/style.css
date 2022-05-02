@@ -1,7 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body, h1, h2, ul, li, p, dd, dt, dl {
+  margin: 0px;
+  padding: 0px;
 }
 
 img {
@@ -23,8 +22,9 @@ body {
 
 .menu {
   grid-column: 3 / 5;
-  margin: 2rem 0rem 2rem 0rem;
-  background: #fb5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #FB5;
 }
 
 .menu ul {
@@ -35,7 +35,7 @@ body {
 
 .menu li a {
   display: block;
-  padding: 15px 10px;
+  padding: 10px;
   margin-right: 10px;
   color: #222;
   text-decoration: none;
@@ -61,7 +61,7 @@ body {
   font-family: 'Playfair Display SC', georgia;
   font-size: 6rem;
   line-height: 1;
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 1rem;
   grid-column: 1 / 4;
 }
@@ -72,7 +72,7 @@ body {
   text-transform: uppercase;
   letter-spacing: .1em;
   margin-bottom: 1rem;
-  color: #e54;
+  color: #E54;
 }
 
 .animais h2::before {
@@ -81,7 +81,7 @@ body {
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #fb5;
+  background: #FB5;
 }
 
 .animais p {
@@ -96,12 +96,16 @@ body {
   grid-column: 2;
 }
 
+.animais-lista li {
+  cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
 
 .animais-lista::-webkit-scrollbar-thumb {
-  background: #fb5;
+  background: #FB5;
   border-left: 4px solid #faf6ed;
   border-right: 4px solid #faf6ed;
 }
@@ -125,8 +129,9 @@ body {
 .faq-lista dt {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
-  margin: 2rem 0rem .5rem 0rem;
-  color: #e54;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: #E54;
 }
 
 .faq-lista dt::before {
@@ -135,12 +140,13 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #fb5;
+  background: #FB5;
 }
 
 .faq-lista dd {
   font-family: Helvetica, Arial;
-  margin-bottom: 0px 0px .5rem 30px;
+  margin-bottom: .5rem;
+  margin-left: 30px;
 }
 
 .mapa {
@@ -162,13 +168,13 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #fb5;
+  background: #FB5;
 }
 
 .copy {
-  grid-column: 3 / 5;
+  grid-column: 3/5;
   margin-bottom: 2rem;
-  background: #fb5;
+  background: #FB5;
 }
 
 .copy p {
@@ -177,7 +183,7 @@ body {
   font-weight: bold;
 }
 
-@media (max-width) {
+@media (max-width: 700px) {
   body {
     grid-template-columns: 1fr;
   }
@@ -203,4 +209,65 @@ body {
   .copy {
     margin-bottom: 0px;
   }
+}
+
+.js .js-tabcontent section {
+  display: none;
+  
+}
+
+.js-tabcontent section.ativo {
+  display: block !important;
+  animation: show .5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.js .js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: '⮧';
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: '⮥';
+}
+
+.js-accordion dd.ativo{
+  display: block;
+  animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+    opacity: 1;
+  }
+}
+
+.js .js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transform: .3s;
+}
+
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0,);
 }

@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js'</script>
   <link rel="stylesheet" href="css/style.css">
   <title>Animais Fantásticos</title>
 </head>
 
 <body>
-  <nav class="menu">
+  <nav class="menu js-menu">
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -18,9 +19,9 @@
       <li><a href="https://www.github.com/nicolasgaldino">Desenvolvedor →</a></li>
     </ul>
   </nav>
-  <section class="grid-section" id="animais">
+  <section class="grid-section animais js-scroll" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista">
+    <ul class="animais-lista js-tabmenu">
       <li><img src="img/imagem1.jpg"></li>
       <li><img src="img/imagem2.jpg"></li>
       <li><img src="img/imagem3.jpg"></li>
@@ -28,7 +29,7 @@
       <li><img src="img/imagem5.jpg"></li>
       <li><img src="img/imagem6.jpg"></li>
     </ul>
-    <div class="animais-descricao">
+    <div class="animais-descricao animais js-tabcontent">
       <section>
         <h2>Raposa</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, eveniet reiciendis distinctio ipsam corrupti est enim odit dolor quam ratione voluptates possimus eos fugiat voluptatum.</p>
@@ -73,9 +74,9 @@
       </section>
     </div>
   </section>
-  <section class="grid-section faq" id="faq">
+  <section class="grid-section faq js-scroll" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista">
+    <dl class="faq-lista js-accordion">
       <dt>Lorem ipsum dolor sit amet?</dt>
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam!</dd>
       <dt>Lorem ipsum dolor sit amet?</dt>
@@ -86,7 +87,7 @@
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam!</dd>
     </dl>
   </section>
-  <section class="grid-section contato" id="contato">
+  <section class="grid-section contato js-scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <img src="img/mapa.png">

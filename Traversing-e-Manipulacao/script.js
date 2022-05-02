@@ -61,9 +61,19 @@ contato.appendChild(cloneTitulo);
 // Exercício
 
 // Duplique o menu e adicione ele em copy
+const nav = document.querySelector('.menu');
+const copy = document.querySelector('.copy');
+const cloneNav = nav.cloneNode(true);
+copy.appendChild(cloneNav);
 
 // Selecione o primeiro DT da dl de Faq
+const faq = document.querySelector('.faq');
+const priDt = faq.querySelector('dt');
 
 // Selecione o DD referente ao primeiro DT
+const proxiDd = priDt.nextElementSibling;
 
 // Substitua o conteúdo html de .faq pelo de .animais
+const faq1 = document.querySelector('.faq');
+const animais0 = document.getElementById('animais');
+faq1.innerHTML = animais0.innerHTML;

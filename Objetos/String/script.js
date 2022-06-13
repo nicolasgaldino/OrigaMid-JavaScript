@@ -25,7 +25,7 @@ linguagem.charAt(linguagem.length - 1); // t
 // Concatena as strings e retorna o resultado
 const frase0 = 'A melhor linguagem é ';
 const linguagem0 = 'JavaScript';
-const fraseCompleta = frase.concat(linguagem, '!!');
+const fraseCompleta = frase0.concat(linguagem, '!!');
 //-----------------------------------------------------------------------------------
 // STR.INCLUDES(SEARCH, POSITION)
 // Procura pela string exata dentro de outra string. A procura é case sensitive

@@ -14,12 +14,12 @@ const App = () => {
   const [ carregando, setCarregando ] = React.useState(null);
 
   async function handleClick(event) {
-    setCarregando(true);
-    const currentTar = event.target.innerText.toLowerCase();
-    const url = `https://ranekapi.origamid.dev/json/api/produto/${currentTar}`;
-    const response = await fetch(url);
-    const json = await response.json();
-    setDados(json);
+    setCarregando(true); // exibe a mensagem 'Carregando'
+    const currentTar = event.target.innerText.toLowerCase(); // pega o texto dentro do botão e o transforma para minúsculo
+    const url = `https://ranekapi.origamid.dev/json/api/produto/${currentTar}`; // pega o texto do botão armazenado na 'currentTar', e insere no endpoint para fazer a requisição
+    const response = await fetch(url); // espera a resposta da API
+    const json = await response.json(); // converte a resposta para json
+    setDados(json); // define o valor de 'setDados' como sendo a resposta e json da API
     setCarregando(false);
   }
 
